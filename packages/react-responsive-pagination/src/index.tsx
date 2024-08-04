@@ -115,7 +115,7 @@ function ResponsivePagination(props: ResponsivePaginationProps) {
           >
             <a
               className={pageLinkClassName}
-              href={linkHref === 'hash' ? '#' : undefined}
+              href={`./${item.gotoPage}${window.location.search}`}
               onClick={preventDefault(() => handlePageChange(item.gotoPage))}
               aria-label={item.a11yLabel}
             >
